@@ -2242,12 +2242,10 @@ public class Assistant extends BaseService {
           com.ibm.cloud.sdk.core.util.GsonSingleton.getGson()
               .toJsonTree(updateDialogNodeOptions.newMetadata()));
     }
-    if (updateDialogNodeOptions.newNextStep() != null) {
-      contentJson.add(
-          "next_step",
-          com.ibm.cloud.sdk.core.util.GsonSingleton.getGson()
-              .toJsonTree(updateDialogNodeOptions.newNextStep()));
-    }
+    contentJson.add(
+        "next_step",
+        com.ibm.cloud.sdk.core.util.GsonSingleton.getGson()
+            .toJsonTree(updateDialogNodeOptions.newNextStep()));
     if (updateDialogNodeOptions.newTitle() != null) {
       contentJson.addProperty("title", updateDialogNodeOptions.newTitle());
     }
